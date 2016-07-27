@@ -1,0 +1,10 @@
+def check_if_prime(x):
+    y = 2
+    while y < x:
+        if x % y == 0:
+            prime = False
+            break
+        else:
+            prime = True
+
+    print check_if_prime(13)

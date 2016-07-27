@@ -1,0 +1,20 @@
+import time
+ 
+def sum_of_primes(limit):
+    if limit % 2 != 0: limit += 1
+    primes = [True] * limit
+    primes[0]= [None]
+    primes[1] = [None]
+    sum = 0
+    for ind,val in enumerate(primes):
+        if val is True:
+            # sieve out non-primes by multiples of known primes
+            primes[ind*2::ind] = [False] * (((limit - 1)//ind) - 1)
+            sum += ind
+    return sum
+ 
+start = time.time()
+prime = sum_of_primes(2000000)
+elapsed = (time.time() - start)
+ 
+print "found %s in %s seconds." % (prime,elapsed)
