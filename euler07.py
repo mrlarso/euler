@@ -8,10 +8,11 @@ def is_prime(number):
 	return True
 
 n = 2
-test = 3
-while n < 1001:
+test = 5
+while n < 10001:
     if is_prime(test):
         n +=1
+        print test
     test += 2
 
 print str(n)
