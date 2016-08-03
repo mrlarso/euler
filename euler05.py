@@ -1,6 +1,6 @@
 
 def is_divisible(number):
-    for divisor in [20,19,18,17,16,14,13,11]:
+    for divisor in [2520,20,19,18,17,16,14,13,11]:
         if number%divisor != 0:
             return False
     return True
