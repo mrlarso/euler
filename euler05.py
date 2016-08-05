@@ -1,13 +1,16 @@
 
 def is_divisible(number):
-    for divisor in [2520,20,19,18,17,16,14,13,11]:
+    for divisor in range(11,21):
         if number%divisor != 0:
             return False
     return True
 
 def get_lowest():
-    for testNumber in range(20,10000000000,20):
+    testNumber = 20
+    while True:
         if is_divisible(testNumber):
+            print testNumber
             return testNumber
+        testNumber +=20
 
-get_lowest()
+print get_lowest()
