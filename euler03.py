@@ -1,4 +1,3 @@
-
 def prime_factors(n):
     factors = []
     d = 2
@@ -11,4 +10,3 @@ def prime_factors(n):
     return factors
 
 print prime_factors(600851475143)
-
